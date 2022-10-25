@@ -17,8 +17,17 @@ AB.params <- create.rpath.params(groups, types)
 #sql: Select x where y = z from table
 #data.table: table[y == z, x]
 
-#Can also assign values using ':=' operator
+#Can also assign values using ':=' operator [this is an example]
 AB.params$model[Group == 'cod', Biomass := 3]
+
+# Static parameters for this example
+#Biomass accumulation and unassimilated production
+AB.params$model[Type < 3, BioAcc  := 0]
+AB.params$model[Type < 2, Unassim := 0.2]
+AB.params$model[Type == 2, Unassim := 0]
+#Detrital Fate
+AB.params$model[Type < 2, detritus := 1]
+AB.params$model[Type > 1, detritus := 0]
 
 #Check for issues in your parameter file with
 check.rpath.params(AB.params)
