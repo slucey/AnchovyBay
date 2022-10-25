@@ -37,3 +37,15 @@ AB <- rpath(AB.params, 'Anchovy Bay')
 AB
 print(AB, morts = T)
 webplot(AB)
+
+#Running Rsim
+# 3 step process 
+#Set the scene with rsim.scenario
+AB.scene <- rsim.scenario(AB, AB.params, 1:25)
+
+#Make any adjustments
+AB.scene <- adjust.fishing(AB.scene, 'ForcedEffort', group = 'trawlers',
+                           sim.year = 10:25, value = 0.5)
+
+#Run the scenario
+AB.run <- rsim.run(AB.scene, years = 1:25)
