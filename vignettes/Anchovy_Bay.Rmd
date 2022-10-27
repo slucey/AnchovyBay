@@ -121,7 +121,7 @@ You now have the information that is needed to do mass-balance on this model.  R
 
 ## Exploring Ecosim with Anchovy Bay
 
-Scientists have noticed a gradual decline in the seal population of about 50 kg a year.  The resource managers of Anchovy Bay decide that new regulations should be put in place on the seal fishery to combat this population decline.  Local trawlers are concerned that an increased seal population will negatively impact their business as their chief targets are prey for seals.  Build an ecosim scenario that shows the impact of the seal decline and one that shows the impact of reducing the seal fishery in half.  Also test the impact if seals are a strong ‘top-down’ predator.  Run the simulations for 25 years.
+Scientists have noticed a gradual decline in the seal population of about 50 kg a year.  The resource managers of Anchovy Bay decide that new regulations should be put in place on the seal fishery to combat this population decline.  Local trawlers are concerned that an increased seal population will negatively impact their business as their chief targets are prey for seals.  Build an rsim scenario that shows the impact of the seal decline and one that shows the impact of reducing the seal fishery in half.  Also test the impact if seals are a strong ‘top-down’ predator.  Run the simulations for 25 years.
 
 Several years later, ecotourism becomes a big part of Anchovy Bay.  A portion of the trawlers shift their effort to taking customers whale watching.  What is the impact on the groundfish species?  What if cod are a strong ‘top-down’ predator?  It has been studied that whiting will increase their consumption when at lower numbers.  What effect does this have on the previous scenario?
 
@@ -129,3 +129,4 @@ Scenarios can be viewed as a table or as a graph.  The built in function in Rpat
 
 Run scenarios varying level of trawling effort. Find the effort leading to maximum long-term yield for the trawl fishery. Plot and discuss implications for species biomass, mix of species in the trawl catch, and impact on other gears associated with fishing at maximum yield for trawl.
  
+Finally, develop two or more strategies to test in an MSE framework within Anchovy Bay.  The management objective is to maximize fishery yield but not allowing any species to go below $1/2\ B_{MSY}$.  Show tradeoffs between fisheries.  Assuming that cod sells for \$3/pound, mackerel \$2/pound, whiting \$1/pound, shrimp \$4/pound, and anchovies \$0.50/pound is one of your strategies more economically beneficial to the community? The `AB_closed_loop.R` script can help you set-up the closed loop simulation.
