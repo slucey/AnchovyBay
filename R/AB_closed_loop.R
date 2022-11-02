@@ -51,7 +51,7 @@ for(i in 25:99){
 }
 
 #Visualize results
-rsim.plot(AB.full, groups[1:11])
+rsim.plot(AB.full)
 cod <- extract.node(AB.full, 'cod')
 plot(cod$Biomass, xlab = 'Month', ylab = 'Biomass')
 abline(h = cod.ref)
