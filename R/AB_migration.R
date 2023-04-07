@@ -14,11 +14,12 @@ rsim.plot(AB.baserun)
 #Add migration
 AB.mig <- copy(AB.scene)
 AB.mig <- adjust.forcing(AB.mig, 'ForcedMigrate', 'mackerel', 
-                         sim.year = 1980, sim.month = c(4, 9), 
-                         value = c(5, -1.0))
+                         sim.year = 1980:2000, sim.month = c(3:5,9:11), 
+                         value = c(rep(3.1, 3), rep(-2.4, 3)))
 AB.migrun <- rsim.run(AB.mig, years = 1980:2000)
 
 rsim.plot(AB.migrun)
+abline(h=0.50)
 
 #Test other forcing functions
 AB.bio <- copy(AB.scene)
